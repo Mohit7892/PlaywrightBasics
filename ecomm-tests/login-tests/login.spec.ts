@@ -2,7 +2,7 @@ import {test, expect, Browser, Page, Locator} from '@playwright/test'
 import {webkit, firefox, chromium} from '@playwright/test'
 
 test('login to the portal ', async() => {
-  const browser: Browser = await chromium.launch({headless : true})
+  const browser: Browser = await chromium.launch({headless : false})
   const page: Page = await browser.newPage();
   await page.goto('https://naveenautomationlabs.com/opencart/index.php?route=account/login');
 

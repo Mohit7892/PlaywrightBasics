@@ -18,6 +18,9 @@ test("authenticate the user", async () => {
 
   await page.goto("https://the-internet.herokuapp.com/basic_auth");
 
+  //static waits
+  await page.waitForTimeout(5000);
+
   const successMsg: Locator = page.locator("//h3/following-sibling::p");
   await expect(successMsg).toContainText("Congratulations");
 
